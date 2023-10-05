@@ -105,9 +105,14 @@ const Login = () => {
             <p className="errormsg">{formErrors.c_box}</p>
           <button className="s_button">SIGN UP</button>
       </form>
-        <span className="p1">By clicking on Sign up. you agree to Superapp <p className="terms_codN">Terms and Conditions of Use</p></span>
-        <span className="p2">To learn more about how Superapp collects, uses, shares and protects your personal data please head Superapp</span>
-          <p className="terms_codN">Terms and Conditions of Use</p>
+          <div>
+            <p className="p1">By clicking on Sign up. you agree to Superapp <span className="terms_codN">Terms and Conditions of Use</span></p>
+            <p className="p2">To learn more about how Superapp collects, uses, shares and protects your personal data please head Superapp<span className="terms_codN">Privacy Policy</span></p>
+          </div>
+
+        {/* <span className="p1">By clicking on Sign up. you agree to Superapp <p className="terms_codN">Terms and Conditions of Use</p></span> */}
+        {/* <span className="p2">To learn more about how Superapp collects, uses, shares and protects your personal data please head Superapp<p className="terms_codN">Privacy Policy</p></span> */}
+          
       </div>
     </div>
   );

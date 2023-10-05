@@ -20,7 +20,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 139.688%; 
 text-align: center;
-margin-top: -10px;
+margin-top: 20px;
 
 }
 .heading2{
@@ -76,7 +76,7 @@ background: #292929;
   letter-spacing: 0.58px;
 }
 
-.p1{margin: 55px 80px;
+.p1,.p2{margin: 5px 50px;
   color: #7C7C7C;
   padding:0 100px;
   text-align: start;
@@ -87,18 +87,18 @@ background: #292929;
   line-height: 141.688%;
   letter-spacing: 0.36px;
 }
-  .p2{margin: 10px 0px;
-    /* padding-left:50px; */
+.p2{ padding-right:90px ;}
+  /* .p2{margin: 5px 80px;
     color: #7C7C7C;
     font-family: Roboto;
     font-size: 18px;
     text-align: start;
     font-style: normal;
     font-weight: 500;
-    line-height: 141.688%; /* 25.504px */
-    letter-spacing: 0.36px;}
+    line-height: 141.688%; 
+    letter-spacing: 0.36px;} */
   
-  .terms_codN{margin: 5px 180px;
+  .terms_codN{margin: 0px 5px;
     color: #72DB73;text-align: start;
 font-family: Roboto;
 font-size: 18px;
