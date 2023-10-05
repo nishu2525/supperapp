@@ -7,10 +7,15 @@ const Login = () => {
   const [formErrors,setFormErrors]=useState({})
   const [isSubmit, setIsSubmit] = useState(false);
   const [TnC,setTnC]=useState(false);
+  const[user,setUser]=useState({
+    name:"",username:"",email:"",mobile:""
+  });
 
   const handleChange=(e)=>{
+    console.log(e);
     const {name , value}=e.target;
     setFormValues({...formValues,[name]:value});
+    setUser({...user,[name]:value})
   };
 
   const handleSubmit=(e)=>{
@@ -18,6 +23,16 @@ const Login = () => {
     setFormErrors(validate(formValues));
     setIsSubmit(true);
     setTnC(true)
+    var f_Name=document.getElementById("name").value
+    var f_UserName=document.getElementById("username").value
+    var f_Email=document.getElementById("email").value
+    var f_Mobile=document.getElementById("mobile").value
+    
+    localStorage.setItem("Name is ",f_Name);
+    localStorage.setItem("UserName is ",f_UserName);
+    localStorage.setItem("Email is ",f_Email);
+    localStorage.setItem("Mobile_no is ",f_Mobile);
+    
   };
   
   useEffect(()=>{
