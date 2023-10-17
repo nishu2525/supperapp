@@ -11,7 +11,7 @@ html,body{
 .page_1{display:flex;}
 .image_bg{height: 120vh;width: 50vw;   display: inline-block;}
 .login_form{height: 120vh;width: 50vw;  display: inline-block;background: #000;}
-
+/* 
 .heading{
   color: #72DB73;
 font-family: Single Day;
@@ -22,7 +22,7 @@ line-height: 139.688%;
 text-align: center;
 margin-top: 20px;
 
-}
+} */
 .heading2{
   color: #FFF;
 font-family: DM Sans;
@@ -98,7 +98,7 @@ background: #292929;
     line-height: 141.688%; 
     letter-spacing: 0.36px;} */
   
-  .terms_codN{margin: 0px 5px;
+.terms_codN{margin: 0px 5px;
     color: #72DB73;text-align: start;
 font-family: Roboto;
 font-size: 18px;
