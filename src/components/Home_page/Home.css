@@ -1,0 +1,71 @@
+.about_section{
+    margin: 80px 5px 5px 80px ;
+    width: 50vw;
+height: 60vh;
+flex-shrink: 0;
+border-radius: 33.428px;
+background: #5746EA;
+display: inline-flex;
+}
+.profile_photo{
+    margin: 20px;
+    height: 55vh;
+    display: inline-flex;    
+}
+.details{
+    margin-left: 50px;
+    /* margin-top: 3px; */
+    color: antiquewhite;
+    display:grid(1,1r);    
+}
+.details_name{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 36.947px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 103.188%;
+    letter-spacing: 0.739px;
+}
+.details_email{
+    color: #FFF;
+font-family: Roboto;
+font-size: 36.947px;
+font-style: normal;
+font-weight: 400;
+line-height: 103.688%; 
+letter-spacing: 0.739px;
+}
+.details_uName{
+    margin-left:0px ;
+    margin-top: 0px;
+    color: #FFF;
+font-family: Roboto;
+font-size: 72.134px;
+font-style: normal;
+font-weight: 500;
+line-height: 66.188%; 
+letter-spacing: 1.443px;
+}
+.Catergories_b{
+    /* display:;     */
+    margin-top: 150px;
+    margin-right: 200px;
+    display:grid(2);   
+}
+.S_Catergories{
+    width: 180px;
+height: 61.578px;
+flex-shrink: 0;
+color: #FFF;
+font-family: Roboto;
+font-size: 28.15px;
+font-style: normal;
+font-weight: 400;
+line-height: 105.688%; /* 29.751px */
+letter-spacing: 0.563px;
+    border-radius: 36.947px;
+    text-align: center;
+    vertical-align:middle;
+background: #9F94FF;
+}

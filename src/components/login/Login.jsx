@@ -27,8 +27,8 @@ const Login = () => {
     setUser({ ...user, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
     const errors = validate(formValues);
     setFormErrors(errors);
@@ -39,15 +39,26 @@ const Login = () => {
     setIsSubmit(true);
     setTnC(true);
 
+    
     var f_Name = document.getElementById("name").value;
     var f_UserName = document.getElementById("username").value;
     var f_Email = document.getElementById("email").value;
     var f_Mobile = document.getElementById("mobile").value;
 
-    localStorage.setItem("Name is ", f_Name);
-    localStorage.setItem("UserName is ", f_UserName);
-    localStorage.setItem("Email is ", f_Email);
-    localStorage.setItem("Mobile_no is ", f_Mobile);
+    localStorage.setItem("Name", f_Name);
+    localStorage.setItem("UserName", f_UserName);
+    localStorage.setItem("Email", f_Email);
+    localStorage.setItem("Mobile_no", f_Mobile);
+    
+    // const userData = {
+    //     name: f_Name,
+    //     username: f_UserName,
+    //     email: f_Email,
+    //     mobile: f_Mobile
+
+    // };
+
+    // localStorage.setItem('userData', JSON.stringify(userData));
   };
 
   useEffect(() => {
@@ -121,7 +132,7 @@ const Login = () => {
           </label>
           <p className="errormsg">{formErrors.c_box}</p>
 
-          <button className="s_button" onClick={handleSubmit}> SIGN UP</button>
+          <button className="submit_button" onClick={handleSubmit}> SIGN UP</button>
         </form>
         <div>
           <p className="p1">

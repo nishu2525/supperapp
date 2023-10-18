@@ -44,11 +44,13 @@ function Category_page()
       updatedSelectedCategories.push(title);
     }
     setSelectedCategories(updatedSelectedCategories); 
+    localStorage.setItem("selectedCategories", JSON.stringify(updatedSelectedCategories));
   };
 
   const handleRemoveCategory = (title) => {
     const updatedSelectedCategories = selectedCategories.filter(category => category !== title);
     setSelectedCategories(updatedSelectedCategories);
+    localStorage.setItem("selectedCategories", JSON.stringify(updatedSelectedCategories));
   };
 
   const handleNextClick = () => {
@@ -59,7 +61,7 @@ function Category_page()
     }
     if(selectedCategories.length >= 3){
 
-      navigate("/Home");
+      navigate("/Home",{ state: { selectedCategories } });
     }
   };
   return (
