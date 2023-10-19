@@ -77,9 +77,9 @@ const Login = () => {
     if (!values.username) {
       errors.username = "Field is required";
     } else if (values.username.length < 5) {
-      errors.username = "UserName Must be atleast 5 Characers";
+      errors.username = "UserName must be atleast 5 characers";
     } else if (values.username.length > 15) {
-      errors.username = "UserName Must not excced 15 Characers";
+      errors.username = "UserName must not excced 15 characers";
     }
 
     if (!values.email) {
@@ -91,11 +91,11 @@ const Login = () => {
     if (!values.mobile) {
       errors.mobile = "Field is required";
     } else if (values.mobile.length > 10) {
-      errors.mobile = "Mobile No must be 10 Digits";
+      errors.mobile = "Mobile no must be 10 digits";
     } else if (values.mobile.length < 10) {
-      errors.mobile = "Mobile No must be 10 Digits";
+      errors.mobile = "Mobile no must be 10 digits";
     } else if (values.Mobile.length === 10) {
-      errors.mobile = "Mobile No must be 10 Digits";
+      errors.mobile = "Mobile no must be 10 digits";
     }
 
     if (!values.c_box) {
