@@ -49,16 +49,6 @@ const Login = () => {
     localStorage.setItem("UserName", f_UserName);
     localStorage.setItem("Email", f_Email);
     localStorage.setItem("Mobile_no", f_Mobile);
-    
-    // const userData = {
-    //     name: f_Name,
-    //     username: f_UserName,
-    //     email: f_Email,
-    //     mobile: f_Mobile
-
-    // };
-
-    // localStorage.setItem('userData', JSON.stringify(userData));
   };
 
   useEffect(() => {

@@ -24,7 +24,7 @@ function Home() {
   const [weather, setWeather] = useState(false);
   useEffect(() => {
     const apiKey = "987de39fe8924052ada80850232502 ";
-    const location = "Delhi";
+    const location = "Pune";
 
     const fetchWeather = async () => {
       await fetch(
@@ -39,16 +39,20 @@ function Home() {
   // News Section 
 
   const [news, setNews] = useState('')
+  const n_apiKey = 'fb89ab3f83fd460cb89f5259af927163'
+  console.log(news)
   useEffect(()=>{
-    const fetchNews = async()=>{
-       await fetch("https://newsapi.org/v2/everything?q=tesla&from=2023-02-09&sortBy=publishedAt&apiKey=4ef9b38002184be3bf2ccb7b066196af")
-            .then(async(data)=>await data.json()).then((res)=>setNews(res.articles[0]))
-    }
-    fetchNews();
-},[])
+      const fetchNews = async()=>{
+         await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${n_apiKey}`)
+              .then(async(data)=>await data.json()).then((res)=>setNews(res.articles[0]))
+      }
+      fetchNews();
+  },[])
 
+  
   return (
-  <div>
+  <div className="container">
+
           {/*   About Section  */}                 {/*   About Section  */}
       <div className="about_section">
           <div className="profile">
@@ -67,11 +71,11 @@ function Home() {
 
       {/*   Weather Section  */}                 {/*   Weather Section  */}  
 
-              <div className="weather-details">
+              <div className="weather_section">
                     <div className="timezone">
                       <p>{currentDate}</p>
                       <p>{currentTime}</p>
-              </div>
+                    </div>
 
              {weather ? (
               <div className="weatherzone">
@@ -93,9 +97,16 @@ function Home() {
               </div>
             ) : (<></> )}
           </div>
-                <div className="news_section">
-                <img src={news.urlToImage} alt="news_ig"/>
-                </div>    
+
+                 <img src={news.urlToImage} className="news_section img" alt="news-ig"/>
+             <div className="news_section" >
+                <div className="news_details">
+                    <p>{news.title}</p>
+                    <span >{currentDate}</span>
+                    <span >{currentTime}</span>
+                </div>
+                <div className="n_description">{news.description}</div>
+           </div>
         </div>
      
   );
