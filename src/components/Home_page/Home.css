@@ -101,6 +101,38 @@ justify-content: space-around;
 }
 .weatherzone{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
+    color:#FFF ;
+     justify-content: space-around; 
 }
+.weatherzone img{height: 15vh; width: 8vw;}
+.weatherzone p{
+    color: #FFF;
+font-family: Roboto;
+font-size: 24.599px;
+font-style: normal;
+font-weight: 400;
+line-height: 139.688%; 
+margin-bottom: 4rem;
+}
+.weatherzone span{
+    font-size: 78.224px;
+}
+.weatherzone p img{
+    height: 5vh;width: 2vw;
+}
+.vl {
+    border-left: 1.367px solid  #FFF;;
+    height: 10rem;
+    margin-bottom: 3rem;
+  }
+.weatherzone span sup{ margin-bottom: 50px;}
+ #p1{font-size: 31.432px;margin-bottom: 4rem;}
+
+ .news_section{
+    right: 5px;
+    height:"90vh";width:"30vw"; position:"relative"; border-radius:"12px";padding:"6px"
+ }
+ .news_section img{
+    height:"60vh"; border-radius:"12px";width:"30vw"
+ }
