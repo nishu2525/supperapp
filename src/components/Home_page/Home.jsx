@@ -15,6 +15,7 @@ function Home() {
   const storedUserName = localStorage.getItem("UserName");
   const storedEmail = localStorage.getItem("Email");
 
+  
 
   //  Weather Section    
   const location = useLocation();
@@ -49,7 +50,13 @@ function Home() {
       fetchNews();
   },[])
 
-  
+
+   // Notes Section
+  const [text, setText] = useState(JSON.parse(window.localStorage.getItem("text")))
+  const handleChange=(e)=>{
+    setText(e.target.value)
+    window.localStorage.setItem("text",JSON.stringify(text))
+}
   return (
   <div className="container">
 
@@ -107,7 +114,17 @@ function Home() {
                 </div>
                 <div className="n_description">{news.description}</div>
            </div>
+                {/*Notes Section   */}
+           <div className="notesdiv">
+                 <p className="notesheading">All notes</p>
+                 <textarea className="notestext" value={text} onChange={(e)=>handleChange(e)}/>
+           </div>
+
+
+
         </div>
+
+        
      
   );
 }
